@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFA88867-F347-4502-8D77-F77DB84E0861}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CWGUIOFF</RootNamespace>
+    <AssemblyName>CWGUIOFF</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton.Toolkit, Version=70.22.11.312, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Toolkit.70.22.11.312\lib\net472\Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.1823.32, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1823.32\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.1823.32, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1823.32\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.1823.32, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1823.32\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddTrains.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrains.Designer.cs">
+      <DependentUpon>AddTrains.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookTrain.Designer.cs">
+      <DependentUpon>BookTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPassengers.cs">
+      <DependentUpon>DataSetPassengers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPassengers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPassengers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteTicket.Designer.cs">
+      <DependentUpon>DeleteTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DriverLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriverLogin.Designer.cs">
+      <DependentUpon>DriverLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DriverRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriverRegister.Designer.cs">
+      <DependentUpon>DriverRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DriverReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriverReport.Designer.cs">
+      <DependentUpon>DriverReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DriversDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DriversDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DriverUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriverUpdate.Designer.cs">
+      <DependentUpon>DriverUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainLoginForm.Designer.cs">
+      <DependentUpon>MainLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassengerDataStationMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassengerDataStationMaster.Designer.cs">
+      <DependentUpon>PassengerDataStationMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassengerReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassengerReports.Designer.cs">
+      <DependentUpon>PassengerReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveTrain.Designer.cs">
+      <DependentUpon>RemoveTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResignDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResignDriver.Designer.cs">
+      <DependentUpon>ResignDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StationMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StationMaster.Designer.cs">
+      <DependentUpon>StationMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainDataset.cs">
+      <DependentUpon>TrainDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrainDataset.Designer.cs">
+      <DependentUpon>TrainDataset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainDataset1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrainDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrainReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainReports.Designer.cs">
+      <DependentUpon>TrainReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainsMainLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainsMainLoginForm.Designer.cs">
+      <DependentUpon>TrainsMainLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTicket.Designer.cs">
+      <DependentUpon>UpdateTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTrain.Designer.cs">
+      <DependentUpon>UpdateTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPWForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPWForm.Designer.cs">
+      <DependentUpon>UserPWForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPJourney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPJourney.Designer.cs">
+      <DependentUpon>ViewPJourney.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddTrains.resx">
+      <DependentUpon>AddTrains.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookTrain.resx">
+      <DependentUpon>BookTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteTicket.resx">
+      <DependentUpon>DeleteTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriverLogin.resx">
+      <DependentUpon>DriverLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriverRegister.resx">
+      <DependentUpon>DriverRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriverReport.resx">
+      <DependentUpon>DriverReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriverUpdate.resx">
+      <DependentUpon>DriverUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainLoginForm.resx">
+      <DependentUpon>MainLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassengerDataStationMaster.resx">
+      <DependentUpon>PassengerDataStationMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassengerReports.resx">
+      <DependentUpon>PassengerReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PReport.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RemoveTrain.resx">
+      <DependentUpon>RemoveTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ResignDriver.resx">
+      <DependentUpon>ResignDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StationMaster.resx">
+      <DependentUpon>StationMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainReports.resx">
+      <DependentUpon>TrainReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainReportWizard.rdlc" />
+    <EmbeddedResource Include="TrainsMainLoginForm.resx">
+      <DependentUpon>TrainsMainLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTicket.resx">
+      <DependentUpon>UpdateTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTrain.resx">
+      <DependentUpon>UpdateTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPWForm.resx">
+      <DependentUpon>UserPWForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPJourney.resx">
+      <DependentUpon>ViewPJourney.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSetPassengers.xsc">
+      <DependentUpon>DataSetPassengers.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPassengers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPassengers.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPassengers.xss">
+      <DependentUpon>DataSetPassengers.xsd</DependentUpon>
+    </None>
+    <None Include="DriversDataSet.xsc">
+      <DependentUpon>DriversDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DriversDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DriversDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DriversDataSet.xss">
+      <DependentUpon>DriversDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TrainDataset.xsc">
+      <DependentUpon>TrainDataset.xsd</DependentUpon>
+    </None>
+    <None Include="TrainDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrainDataset1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TrainDataset.xss">
+      <DependentUpon>TrainDataset.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.1823.32\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.1823.32\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.1823.32\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.1823.32\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
+</Project>
